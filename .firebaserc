@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "acmf-prod",
+    "dev": "acmf-dev"
+  },
+  "targets": {},
+  "etags": {}
+}
