@@ -1,0 +1,11 @@
+import { JWT } from "google-auth-library";
+
+const auth = new JWT({
+  email: "google-api-access@acmf-dev.iam.gserviceaccount.com",
+  key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCkASZGyaz3hzGg\nBGxBjvsaj7WpygoP9byO8byzNOR+DTSRmnm9lBf1kOwpGnvhRscYKcU62N48z/6X\n4YIuKxFEnlRRyNKsBf+ba5EXuhdXP5bvHjqhfQIJzF84w8wRhw8ZSxt8bn/DIXZi\n2KfTI/0PAXTu+VLeXDRazkpEAtmhJJVGHFAds/aWv1rrXetVRL/SBMHdh29Ddbmq\nIQaYuDjMnqi8k0YXqyILVwuM1sYVuPFZJaBLTxPvB0PF+SzBaQVl5PCBy7CRUZYu\nw7bOIhoE+M8AgWvst3+X3btU7MrpJ6yI+thpilg6jlu8y5Jww/LXD0H/1vsPGLSx\nhjneoxmXAgMBAAECggEAHkYODDwXHxwIF4spdpKPnJARjxV59Qc99r79v7DQSspi\nPUxgE5QeNhi51z6JxoRbpQS04Q9+OoiEbQHWF3KgveNiGjSxWsrCq6xX/KK/wz28\nPUh9tyiNs0RUAXT3Gvcs3NTl7nqxP9JR+Z4XoJyAjoAM1z4Tw3MOwQJaaCKEjL+Z\n0DVqpCnuWmzC3Xe5OURPAfSp2Cu91wPF4bIfXfMNS20UMV6kPCgY2b18LgVI0BRC\nnaw5JMWOVA9JQzDcx+6koGWd2qScRK9bOwFWwmad2s6L/kCGhmWIWVjz90N3jtSx\nHmUNGzWKlq6r1oxxLS8E2Sq33P9Lt8tRP69A1+rmmQKBgQDU/6oAvMeLV0sbtmVz\nOgyuTq3Mh5Yuh9TWve2OIr6AjkVGWdEUf1Nv019mtj+xQzkn3LbcqWmVwuPN9Vt2\nFrgIYLaycbz/D3Gbr4viRt/mz5OWCy+iyXXLClgeCnzfbJW/gPs1WqHknXYMTq5u\nxDSIiyS7y5a/nYHY3/jO3QxRTwKBgQDFHVXs3Cp8JfZ3zw4v8jfXJPIWELi9ulXR\njMCjC+/69I/iCwF5hDCcZOLKgWJyJZvoC2cImPZNsG/o1pIDCuc7/uawwIMwUkJW\npa1t1m0OmdnDNb61R4as+BAsMGj7ktOXPblJLiZSPMX7PtVVfvQJd/kE50Xgs6TT\nA/AKQ2VROQKBgGG7ec7i0BCgmkb59yza6uykD100rXVmQAPUnAbG7HBiV2kDV0s3\nbRp3e2POpgT5GmWvAXzYgykDhrF/LltN6110uv+/7n9+H5vW/bFy4dOvVUHYmh/w\nnorukSYfm9KMqV14mkuN7ZDPq1XUWHdcsdohNlaxANelNupDQo/wn3FDAoGARCd0\ngkVN20c1BQ/uk91oOVdo7QAzIEbBTYchRD7oZxkQdtPfWqi+NhUb5XD/HQCr+3uV\n0H8zCoGq8BLgwXSPp0rncM3fjmGi1lrKsGOnqZjAlqKKohttEXlj/iNu6S1HQ8/v\ntMHkNiMVQV3kXX9b2bpFu9BLdPooT13ZLXNIIOECgYEAzS2IwKQiRQpD1bDXdrul\n0AKKKo0DLivM4mOMsNj50jF0LUGQvhTNNNMSM0W4tDWGCq2mHLxjdjnLH9XPoXQx\nBbbXlrn07peZgyRs3BTLMgDtOJEuU6/SnSV9oFXG2mgRalf19fs5pNNvDN2ZW1S1\nweU/3/Pefw6xJYwKmxet+qE=\n-----END PRIVATE KEY-----\n",
+  scopes: ['https://www.googleapis.com/auth/drive', 'https://www.googleapis.com/auth/calendar']
+})
+
+auth.authorize()
+
+export default auth;
