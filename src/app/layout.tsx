@@ -1,12 +1,11 @@
-import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import GlobalStyles from '@/utils/styles/GlobalStyles'
+import StyledComponentsRegistry from '@/utils/lib/registry'
+import LayoutWrapper from './layoutComponents/layoutWrapper'
 
 export const metadata: Metadata = {
-  title: 'ACMF - Accurate Creative Minds Foundation',
-  description: 'Empowering the Next Generation to Realize Their Full Potential',
+  title: 'Twin example',
+  description: '',
 }
 
 export default function RootLayout({
@@ -16,7 +15,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <StyledComponentsRegistry>
+          <GlobalStyles />
+          <LayoutWrapper>{children}</LayoutWrapper>
+        </StyledComponentsRegistry>
+      </body>
     </html>
   )
 }
