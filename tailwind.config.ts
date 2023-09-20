@@ -13,6 +13,9 @@ export default {
         customRed: '#ED1C24',
         customGrey: '#2C2C2C',
       },
+      fontFamily: {
+        sans: ['var(--font-sans)'],
+      },
     },
   },
   plugins: [],
