@@ -1,5 +1,5 @@
 'use client'
-import { ButtonBase as Button, Heading } from '@/components'
+import { Button, Heading } from '@/components'
 import LayoutWrapper from './layoutComponents/layoutWrapper'
 import GlobalStyles from '@/utils/styles/GlobalStyles'
 import StyledComponentsRegistry from '@/utils/lib/registry'

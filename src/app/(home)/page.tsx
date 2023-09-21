@@ -1,10 +1,14 @@
 'use client'
 
+import Hero from './home/components/hero'
+import SubHero from './home/components/sub-hero'
+
 const Home = () => {
   return (
-    <div>
-      <h1>welcome to acmf</h1>
-    </div>
+    <main>
+      <Hero />
+      <SubHero />
+    </main>
   )
 }
 

@@ -1,4 +1,4 @@
-export { default as Button, ButtonBase } from './Button'
+export { default as Button, FormButton } from './Button'
 export { default as Logo } from './Logo'
 export { default as LoadingPage, LoadingSvg, LoadingComponent } from './loading'
 export { default as Maxwidth } from './maxwidth'
