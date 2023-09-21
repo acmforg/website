@@ -1,5 +1,6 @@
 'use client'
 
+import { HTMLAttributes, HTMLProps } from 'react'
 import tw, { TwStyle, styled } from 'twin.macro'
 
 type HeadingVariant = 'h1' | 'h2' | 'h3' | 'h4'
@@ -18,3 +19,16 @@ const headingVariants: Record<HeadingVariant, TwStyle> = {
 export const Heading = styled.h1<HeadingProps>(({ $variant = 'h1' }) => [
   headingVariants[$variant],
 ])
+
+interface IFancyHeader extends HTMLProps<HTMLHeadingElement> {
+  ordinary: string
+  colored: string
+}
+
+export const FancyHeader = ({ ordinary, colored, ...rest }: IFancyHeader) => {
+  return (
+    <Heading $variant="h2" as="h2" {...rest}>
+      {ordinary} <span tw="text-primary">{colored}</span>
+    </Heading>
+  )
+}

@@ -11,6 +11,9 @@ export const routePaths = {
   contact: {
     path: '/contact',
   },
+  programs: {
+    path: '/#programs',
+  },
 }
 
 export const socials = {

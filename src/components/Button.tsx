@@ -3,9 +3,11 @@
 import React, { ComponentPropsWithoutRef, ElementType } from 'react'
 import tw, { styled, css } from 'twin.macro'
 import { LoadingSvg } from './loading'
+import Link from 'next/link'
 
 type ButtonMod<T extends ElementType> = {
   as?: keyof React.JSX.IntrinsicElements
+  href?: string
 } & ComponentPropsWithoutRef<T>
 
 export const Button = styled.button<ButtonProps>(
@@ -35,6 +37,20 @@ export const FormButton = <T extends ElementType = 'button'>({
 }: ButtonProps & ButtonMod<T>) => {
   return (
     <Button as={as} disabled={$isLoading} {...props}>
+      {$isLoading ? <LoadingSvg tw="mx-auto w-5 h-5" /> : <>{children}</>}
+    </Button>
+  )
+}
+
+export const LinkButton = <T extends ElementType = 'button'>({
+  as,
+  $isLoading,
+  href,
+  children,
+  ...props
+}: ButtonProps & ButtonMod<T>) => {
+  return (
+    <Button as={Link} href={href!} disabled={$isLoading} {...props}>
       {$isLoading ? <LoadingSvg tw="mx-auto w-5 h-5" /> : <>{children}</>}
     </Button>
   )

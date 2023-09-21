@@ -5,7 +5,7 @@ export const heroConfig = {
   sub: "We believe in the boundless potential of young minds. We're on a mission to provide them with the tools, mentorship, and opportunities they need to turn their dreams into reality.",
   img: '/hero.png',
   cta: 'Explore Our Programs',
-  ctaUrl: '/#programs',
+  ctaUrl: routePaths.programs.path,
 }
 
 export const subHero = {
@@ -14,6 +14,7 @@ export const subHero = {
   sub: 'The ACCURATE CREATIVE-MINDS FOUNDATION was established to provide a platform where young talents can flourish, dreams can be realized, and communities can thrive.',
   cta: 'Learn More',
   ctaUrl: routePaths.about.path,
+  img: '/sub-hero.png',
 }
 
 export const programs = [
@@ -22,18 +23,21 @@ export const programs = [
     desc: 'Our mentorship programs are designed to provide one-on-one guidance and support to young individuals. We match talented and passionate mentors with aspiring youth, creating a dynamic learning environment where knowledge and experience are shared.',
     icon: '/icons/mentorship.png',
     label: 'mentorship',
+    color: '#3571B8',
   },
   {
     title: 'Training Workshops',
     desc: 'Our training workshops cover a wide range of fields, from arts and technology to entrepreneurship and leadership. These hands-on workshops are facilitated by experts in their respective domains and are tailored to equip participants with practical skills and knowledge.',
     icon: '/icons/training.png',
     label: 'training',
+    color: '#408F46',
   },
   {
     title: 'Support Services',
     desc: 'Our comprehensive support services encompass a variety of resources aimed at holistic youth development. We provide counseling, career guidance, and access to educational resources to help young individuals overcome obstacles and reach their full potential.',
     icon: '/icons/support.png',
     label: 'support',
+    color: '#D79151',
   },
 ]
 
