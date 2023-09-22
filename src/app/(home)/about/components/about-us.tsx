@@ -6,7 +6,7 @@ const AboutUs = () => {
   const { speech, about, trustees } = aboutConfig
   return (
     <Maxwidth tw="flex flex-col gap-16 lg:(gap-[6.25rem])">
-      <FancyHeader ordinary="About" colored="Us" />
+      <FancyHeader ordinary="About" colored="Us" tw="text-center" />
 
       <div tw="flex flex-col gap-12 lg:(flex-row gap-24)">
         <NextImage
@@ -50,7 +50,7 @@ const AboutUs = () => {
           tw="pb-16 text-center lg:(pb-20 pt-5)"
         />
 
-        <div tw="flex flex-wrap gap-8 justify-center">
+        <div tw="flex flex-wrap gap-8 justify-center lg:(gap-y-[5rem]) xl:(justify-start)">
           {trustees.map(trustee => (
             <div key={trustee.name} tw="max-w-fit text-center w-[22.4rem]">
               <div tw="relative overflow-hidden rounded-[0.75rem]">
