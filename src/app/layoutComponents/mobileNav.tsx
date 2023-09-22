@@ -2,15 +2,16 @@
 
 import { useState, useEffect } from 'react'
 import Logo from '@/components/Logo'
-import Link from 'next/link'
 import { IoMdCloseCircle } from 'react-icons/io'
 import { FiMenu } from 'react-icons/fi'
 import tw from 'twin.macro'
-import { Button } from '@/components'
 import { headerLinks } from '@/utils/routepaths'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const MobileNav = () => {
   const [menuOpen, setMenu] = useState(false)
+  const pathName = usePathname()
 
   useEffect(() => {
     const body = document.querySelector('body')
@@ -66,23 +67,21 @@ const MobileNav = () => {
           ]}
         >
           {headerLinks.map(link => (
-            <li
+            <Link
+              href={link.href}
               key={link.title}
               onClick={toggleMenu}
-              css={[tw`hover:underline`, menuOpen && tw`py-2 px-4`]}
+              css={[
+                tw`hover:(text-primary)`,
+                menuOpen && tw`py-2 px-4`,
+                link.href.includes(pathName) &&
+                  tw`text-primary underline underline-offset-[1rem]`,
+              ]}
             >
-              <a href={link.href}>{link.title}</a>
-            </li>
+              {link.title}
+            </Link>
           ))}
         </ul>
-
-        {/* <ul
-          tw={
-            'sticky bottom-0 flex flex-col items-stretch gap-4 mt-auto bg-white py-4'
-          }
-        >
-          <Button>Get Involved</Button>
-        </ul> */}
       </nav>
     </div>
   )

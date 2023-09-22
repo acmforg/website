@@ -1,5 +1,6 @@
 'use client'
 
+import Contact from './contact/page'
 import Events from './home/components/events'
 import Hero from './home/components/hero'
 import Involvement from './home/components/involvement'
@@ -18,7 +19,7 @@ const Home = () => {
       <Testimonials />
       <Support />
       <Events />
-      <div>dd</div>
+      <Contact />
     </main>
   )
 }
