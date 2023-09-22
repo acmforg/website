@@ -74,7 +74,7 @@ const MobileNav = () => {
               css={[
                 tw`hover:(text-primary)`,
                 menuOpen && tw`py-2 px-4`,
-                link.href.includes(pathName) &&
+                link.href === pathName &&
                   tw`text-primary underline underline-offset-[1rem]`,
               ]}
             >

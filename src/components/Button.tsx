@@ -15,6 +15,15 @@ export const Button = styled.button<ButtonProps>(
     // The common button styles added with the tw import
     tw`px-[4rem] text-center py-4 w-fit rounded-[0.75rem] font-semibold transform duration-75 bg-primary text-white hover:(bg-[#1A5CAB]) active:(bg-[#14437B]) lg:(px-[4.5rem] py-5 text-lg)`,
 
+    css`
+      &[type='submit'],
+      [type='button'],
+      [type='reset'],
+      [type='submit'] {
+        background-color: #1a5cab;
+      }
+    `,
+
     $variant === 'secondary' && tw`bg-secondary`,
     $variant === 'danger' && tw`bg-customRed`,
 

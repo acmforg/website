@@ -31,10 +31,6 @@ const DesktopNav = () => {
           )
         })}
       </ul>
-
-      {/* <div tw={'flex items-center mt-0 gap-4 2xl:gap-[2.5rem]'}>
-        <Button>Get Involved</Button>
-      </div> */}
     </nav>
   )
 }
