@@ -7,17 +7,12 @@ import {
 } from '@/components'
 import { involvements } from '../config'
 import tw from 'twin.macro'
-import NextImage from '@/components/next-image'
-import { doorStyles, topLeftStyles } from '@/components/icons'
+import { GreenDoor } from '@/components'
 
 const Involvement = () => {
   return (
     <Maxwidth tw="flex flex-col items-center relative pt-6 gap-16 lg:(gap-20)">
-      <NextImage
-        src={'/door-green.png'}
-        alt={'door'}
-        css={[doorStyles, topLeftStyles]}
-      />
+      <GreenDoor />
 
       <FancyHeader ordinary="Get" colored="Involved" />
 

@@ -9,7 +9,7 @@ const Hero = () => {
 
   return (
     <section id="hero" tw="bg-primaryLight">
-      <Maxwidth tw="flex flex-col py-16 lg:(py-[6.25rem] flex-row items-center gap-[4rem])">
+      <Maxwidth tw="flex flex-col py-16 gap-16 lg:(py-[6.25rem] flex-row items-center gap-[4rem])">
         <div tw="flex flex-col gap-4 lg:(gap-6)">
           <Heading>{heading}</Heading>
           <Paragraph>{sub}</Paragraph>

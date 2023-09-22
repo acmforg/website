@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import GlobalStyles from '@/utils/styles/GlobalStyles'
-import StyledComponentsRegistry from '@/utils/lib/registry'
+import StyledComponentsRegistry from '@/utils/lib/styled-comp-registry'
 import LayoutWrapper from './layoutComponents/layoutWrapper'
 import '@/utils/styles/index.css'
 

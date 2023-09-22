@@ -2,7 +2,7 @@
 import { Button, Heading } from '@/components'
 import LayoutWrapper from './layoutComponents/layoutWrapper'
 import GlobalStyles from '@/utils/styles/GlobalStyles'
-import StyledComponentsRegistry from '@/utils/lib/registry'
+import StyledComponentsRegistry from '@/utils/lib/styled-comp-registry'
 
 const NotFound = () => {
   return (
