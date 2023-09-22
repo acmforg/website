@@ -1,7 +1,6 @@
 'use client'
 
-import { Heading, Maxwidth } from '@/components'
-import Button from '@/components/Button'
+import { Heading, Maxwidth, Button } from '@/components'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import Input from './input'
 import NextImage from '@/components/next-image'
@@ -60,11 +59,7 @@ const Contact = () => {
                 type="textarea"
                 name="reason"
               />
-              <Button
-                tw="mt-5 bg-primary rounded-xl w-full mb-3"
-                $variant="primary"
-                type="submit"
-              >
+              <Button tw="mt-5 w-full mb-3" type="submit">
                 Send Message
               </Button>
             </form>
