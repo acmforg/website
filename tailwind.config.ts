@@ -12,6 +12,8 @@ export default {
         secondary: '#49B050',
         customRed: '#ED1C24',
         customGrey: '#2C2C2C',
+        lightGrey: '#F4F9FF',
+        dark: '#616F7F'
       },
       fontFamily: {
         sans: ['var(--font-sans)'],
