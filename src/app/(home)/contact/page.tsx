@@ -59,9 +59,7 @@ const Contact = () => {
                 type="textarea"
                 name="reason"
               />
-              <Button tw="mt-5 w-full mb-3" type="submit">
-                Send Message
-              </Button>
+              <Button tw="mt-5 w-full mb-3">Send Message</Button>
             </form>
           </div>
         </div>
