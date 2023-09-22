@@ -8,7 +8,7 @@ const LayoutWrapper = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <Header />
-      <div tw="min-h-[calc(100vh_-_5rem)]">{children}</div>
+      <div tw="h-full min-h-[50vh]">{children}</div>
       <Footer />
     </>
   )

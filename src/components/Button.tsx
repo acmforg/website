@@ -13,7 +13,7 @@ type ButtonMod<T extends ElementType> = {
 export const Button = styled.button<ButtonProps>(
   ({ $variant, $isSmall, $shadow, $disabled }) => [
     // The common button styles added with the tw import
-    tw`px-[4rem] text-center py-4 max-w-fit rounded-[0.75rem] font-semibold transform duration-75 bg-primary text-white hover:(bg-[#1A5CAB]) active:(bg-[#14437B]) lg:(px-[4.5rem] py-5 text-lg)`,
+    tw`px-[4rem] text-center py-4 w-fit rounded-[0.75rem] font-semibold transform duration-75 bg-primary text-white hover:(bg-[#1A5CAB]) active:(bg-[#14437B]) lg:(px-[4.5rem] py-5 text-lg)`,
 
     $variant === 'secondary' && tw`bg-secondary`,
     $variant === 'danger' && tw`bg-customRed`,
