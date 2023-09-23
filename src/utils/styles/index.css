@@ -2,6 +2,9 @@ html {
   scroll-behavior: smooth;
   color: #454545;
 }
+body {
+  -webkit-tap-highlight-color: transparent !important;
+}
 
 *::-webkit-scrollbar {
   width: 5px;

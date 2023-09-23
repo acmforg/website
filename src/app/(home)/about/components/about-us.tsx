@@ -10,6 +10,7 @@ const AboutUs = () => {
 
       <div tw="flex flex-col gap-12 lg:(flex-row gap-24)">
         <NextImage
+          cover
           tw="h-[16.375rem] rounded-[0.75rem] lg:(h-[20.25rem] min-w-[29.375rem])"
           src="/speech.png"
           alt="founder-speech"
@@ -55,6 +56,7 @@ const AboutUs = () => {
             <div key={trustee.name} tw="max-w-fit text-center w-[22.4rem]">
               <div tw="relative overflow-hidden rounded-[0.75rem]">
                 <NextImage
+                  cover
                   src={trustee.image}
                   alt={trustee.name}
                   tw="h-[16.75rem]"
