@@ -6,6 +6,7 @@ import Image from "next/image"
 import contact from "public/contact.png"
 import { SubmitHandler, useForm } from "react-hook-form";
 import Input from "./input";
+import emailjs from "@emailjs/browser"
 
 interface ContactForm {
   name: string;
@@ -21,7 +22,25 @@ const Contact = () => {
     formState: { errors },
   } = useForm<ContactForm>()
 
-  const onSubmit: SubmitHandler<ContactForm> = (data) => console.log(data)
+  const onSubmit: SubmitHandler<ContactForm> = async (data) => {
+    try {
+      const response = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID!,
+        {
+          reply_to: data.email,
+          email: data.email,
+          name: data.name,
+          message: data.reason
+        },
+        process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY!,
+      )
+
+      alert("Your message has been recorded!")
+    } catch (error) {
+      console.log("error", error);
+    }
+  }
 
   return <div tw="min-h-screen px-5 md:px-0 py-20 bg-lightGrey">
     <Maxwidth>
