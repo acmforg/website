@@ -21,7 +21,7 @@ const DesktopNav = () => {
             <li
               key={link.title}
               css={[
-                tw`hocus:(underline text-primary) font-normal`,
+                tw`hocus:(text-primary) font-normal`,
                 path === link.href &&
                   tw`text-primary font-semibold underline decoration-2 underline-offset-[1.5rem]`,
               ]}
@@ -31,10 +31,6 @@ const DesktopNav = () => {
           )
         })}
       </ul>
-
-      <div tw={'flex items-center mt-0 gap-4 2xl:gap-[2.5rem]'}>
-        <Button>Get Involved</Button>
-      </div>
     </nav>
   )
 }

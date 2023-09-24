@@ -15,6 +15,9 @@ export default {
         lightGrey: '#F4F9FF',
         dark: '#616F7F'
       },
+      fontFamily: {
+        sans: ['var(--font-sans)'],
+      },
     },
   },
   plugins: [],
