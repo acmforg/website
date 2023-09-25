@@ -27,6 +27,9 @@ const NextImage = ({
         alt={alt}
         css={[objectCover ? cover : contain, imageStyles]}
         fill
+        style={{
+          width: '100%',
+        }}
       />
     </Cover>
   )

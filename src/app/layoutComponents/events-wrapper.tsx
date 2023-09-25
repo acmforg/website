@@ -9,7 +9,7 @@ export default async function EventsWrapper({
   children: ReactNode
 }) {
   const queryClient = getQueryClient()
-  await queryClient.prefetchQuery([EVENTS_KEY], fetchEvents)
+  // await queryClient.prefetchQuery([EVENTS_KEY], fetchEvents)
   const dehydratedState = dehydrate(queryClient)
 
   return <Hydrate state={dehydratedState}>{children}</Hydrate>

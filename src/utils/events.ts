@@ -1,0 +1,42 @@
+export const eventsList = [
+  {
+    title: 'Sample Event',
+    desc: 'This is a sample event',
+    date: '2023-01-31 10:00:am',
+    location: 'google meet',
+    type: 'virtual',
+    image: '/events/1.png',
+  },
+  {
+    title: 'Sample Event 2',
+    desc: 'This is a sample event',
+    date: '2023-02-27 10:00:pm',
+    location: 'google meet',
+    type: 'virtual',
+    image: '/events/2.png',
+  },
+  {
+    title: 'Sample Event 3',
+    desc: 'This is a sample event',
+    date: '2023-04-30 9:00:am',
+    location: 'Adelabu street',
+    type: 'physical',
+    image: '/events/1.png',
+  },
+  {
+    title: 'Sample Event 4',
+    desc: 'This is a sample event',
+    date: '2023-10-30 10:00:am',
+    location: 'Adelabu street',
+    type: 'physical',
+    image: '/events/2.png',
+  },
+  {
+    title: 'Sample Event 5',
+    desc: 'This is a sample event',
+    date: '2023-11-30 10:00:am',
+    location: 'Adelabu street',
+    type: 'virtual',
+    image: '/events/2.png',
+  },
+]

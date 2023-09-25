@@ -1,12 +1,13 @@
 import EventsWrapper from '@/app/layoutComponents/events-wrapper'
-import Upcoming from './components/upcoming'
+import Events from './components/events-list-map'
+import EventsContainer from './components/events-page-container'
 
-const Events = () => {
+const EventsPage = () => {
   return (
     <EventsWrapper>
-      <Upcoming />
+      <EventsContainer />
     </EventsWrapper>
   )
 }
 
-export default Events
+export default EventsPage
