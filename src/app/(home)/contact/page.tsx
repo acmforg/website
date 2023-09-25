@@ -5,6 +5,7 @@ import { SubmitHandler, useForm } from 'react-hook-form'
 import Input from './input'
 import NextImage from '@/components/next-image'
 import emailjs from '@emailjs/browser'
+import { toast } from 'react-hot-toast'
 
 interface ContactForm {
   name: string
@@ -21,6 +22,7 @@ const Contact = () => {
   } = useForm<ContactForm>()
 
   const onSubmit: SubmitHandler<ContactForm> = async data => {
+    const loading = toast.loading('sending contact message')
     try {
       const response = await emailjs.send(
         process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID!,
@@ -34,9 +36,12 @@ const Contact = () => {
         process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY!,
       )
 
-      alert('Your message has been recorded!')
+      toast.success('Your message has been recorded!')
     } catch (error) {
+      toast.error('something went wrong, please try again')
       console.log('error', error)
+    } finally {
+      toast.dismiss(loading)
     }
   }
 
@@ -66,7 +71,10 @@ const Contact = () => {
               />
               <Input
                 register={register}
-                validation={{ required: true }}
+                validation={{
+                  required: true,
+                  pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                }}
                 label="Give us your email"
                 type="input"
                 name="email"
