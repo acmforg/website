@@ -5,7 +5,7 @@ export const heroConfig = {
   sub: "We believe in the boundless potential of young minds. We're on a mission to provide them with the tools, mentorship, and opportunities they need to turn their dreams into reality.",
   img: '/hero.png',
   cta: 'Explore Our Programs',
-  ctaUrl: routePaths.programs.path,
+  ctaUrl: '#' + routePaths.programs.path,
 }
 
 export const subHero = {
@@ -46,14 +46,14 @@ export const involvements = [
     title: 'Volunteer Opportunities',
     desc: 'Join our team of dedicated volunteers and make a difference in the lives of young people. Your time and expertise can shape the future.',
     cta: 'Become a Volunteer',
-    ctaUrl: '/#',
+    ctaUrl: '#contact',
     bg: '/volunteer.png',
   },
   {
     title: 'Partnerships',
     desc: "Collaborate with us to amplify our impact. Together, we can create a brighter future for today's youth.",
     cta: 'Partner with Us',
-    ctaUrl: '/#',
+    ctaUrl: '#contact',
     bg: '/partnership.png',
   },
 ]

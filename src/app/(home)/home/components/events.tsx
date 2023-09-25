@@ -1,4 +1,5 @@
 import {
+  Button,
   FancyHeader,
   Heading,
   Maxwidth,
@@ -8,23 +9,33 @@ import {
 import NextImage from '@/components/next-image'
 import tw from 'twin.macro'
 import { involvements } from '../config'
+import EventsListMap from '../../events/components/events-list-map'
+import { eventsList } from '@/utils/events'
+import Link from 'next/link'
+import { routePaths } from '@/utils/routepaths'
 
 const Events = () => {
+  const upcomingEvents = eventsList.filter(
+    event => new Date(event.date) > new Date(),
+  )
+  const pastEvents = eventsList.filter(
+    event => new Date(event.date) < new Date(),
+  )
+  const eventsToShow =
+    upcomingEvents.length > 2
+      ? upcomingEvents.slice(0, 2)
+      : [upcomingEvents[0], pastEvents[0]]
   return (
     <Maxwidth tw="flex flex-col items-center relative pt-6 gap-16 lg:(gap-20)">
       <YellowDoor />
 
       <FancyHeader tw="text-center" ordinary="Our" colored="Events" />
 
-      <div tw="flex flex-col gap-10 lg:(flex-row gap-10)">
-        {involvements.map(involvement => (
-          <div key={involvement.title}>
-            <Heading $variant="h4" as={'h4'}>
-              {involvement.title}
-            </Heading>
-          </div>
-        ))}
-      </div>
+      <EventsListMap events={eventsToShow} />
+
+      <Button as={Link} href={routePaths.events.path}>
+        See more
+      </Button>
     </Maxwidth>
   )
 }

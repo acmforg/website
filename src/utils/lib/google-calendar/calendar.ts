@@ -8,5 +8,5 @@ export const listEvents = async () => {
     calendarId: process.env.GOOGLE_CALENDAR_ID,
   })
 
-  return files.data
+  return files.data.items
 }

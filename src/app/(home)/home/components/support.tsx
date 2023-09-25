@@ -1,4 +1,5 @@
 import {
+  Button,
   GreenDoor,
   Heading,
   LinkButton,
@@ -8,8 +9,10 @@ import {
 import { doorStyles, topLeftStyles } from '@/components/icons'
 import NextImage from '@/components/next-image'
 import tw from 'twin.macro'
+import { useToggle } from 'usehooks-ts'
 
 const Support = () => {
+  const [showDonationDetails, toggleDonationDetails] = useToggle(false)
   return (
     <Maxwidth tw="relative flex flex-col py-12 gap-10 lg:(gap-[6rem] py-[3rem] flex-row items-center)">
       <NextImage
@@ -37,10 +40,20 @@ const Support = () => {
           enabling us to reach more youth and create lasting change.
         </Paragraph>
 
-        <LinkButton href="#!">Donate Now</LinkButton>
+        <Button onClick={toggleDonationDetails}>Donate Now</Button>
+        {showDonationDetails ? (
+          <Paragraph>
+            <Colored>Account name:</Colored> Accurate-Creative Minds Foundation{' '}
+            <br />
+            <Colored>Account no.:</Colored> 1013066409 <br />
+            <Colored>Bank Name:</Colored> Keystone
+          </Paragraph>
+        ) : null}
       </div>
     </Maxwidth>
   )
 }
+
+const Colored = tw.span`text-primary font-semibold`
 
 export default Support

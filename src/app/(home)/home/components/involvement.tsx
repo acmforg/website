@@ -1,10 +1,4 @@
-import {
-  FancyHeader,
-  Heading,
-  LinkButton,
-  Maxwidth,
-  Paragraph,
-} from '@/components'
+import { Button, FancyHeader, Heading, Maxwidth, Paragraph } from '@/components'
 import { involvements } from '../config'
 import tw from 'twin.macro'
 import { GreenDoor } from '@/components'
@@ -31,9 +25,9 @@ const Involvement = () => {
 
             <Paragraph>{involvement.desc}</Paragraph>
 
-            <LinkButton href={involvement.ctaUrl} tw="mt-4">
+            <Button as={'a'} href={involvement.ctaUrl} tw="mt-4">
               {involvement.cta}
-            </LinkButton>
+            </Button>
           </div>
         ))}
       </div>
