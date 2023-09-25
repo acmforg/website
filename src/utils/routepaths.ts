@@ -12,7 +12,7 @@ export const routePaths = {
     path: '/contact',
   },
   programs: {
-    path: '/#programs',
+    path: 'programs',
   },
 }
 

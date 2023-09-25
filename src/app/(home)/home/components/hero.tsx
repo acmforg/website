@@ -13,7 +13,7 @@ const Hero = () => {
         <div tw="flex flex-col gap-4 lg:(gap-6)">
           <Heading>{heading}</Heading>
           <Paragraph>{sub}</Paragraph>
-          <Button tw="mt-4 lg:(mt-8)" as={Link} href={ctaUrl}>
+          <Button tw="mt-4 lg:(mt-8)" as={'a'} href={ctaUrl}>
             {cta}
           </Button>
         </div>

@@ -41,7 +41,7 @@ const Contact = () => {
   }
 
   return (
-    <div tw="pt-20 pb-[7.5rem] bg-lightGrey">
+    <div id="contact" tw="pt-20 pb-[7.5rem] bg-lightGrey">
       <Maxwidth>
         <div tw="flex flex-col gap-[3.5rem]">
           <Heading $variant="h2">

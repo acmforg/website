@@ -5,6 +5,7 @@ import Header from './header'
 import Footer from './footer'
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
 import { MinHeight } from '@/components/maxwidth'
+import { Toaster } from 'react-hot-toast'
 
 const LayoutWrapper = ({ children }: { children: ReactNode }) => {
   const [queryClient] = useState(() => new QueryClient())
@@ -15,6 +16,7 @@ const LayoutWrapper = ({ children }: { children: ReactNode }) => {
         <Header />
         <MinHeight>{children}</MinHeight>
         <Footer />
+        <Toaster />
       </QueryClientProvider>
     </>
   )
