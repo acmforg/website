@@ -18,13 +18,13 @@ export const routePaths = {
 
 export const socials = {
   facebook: {
-    path: '#',
+    path: 'https://www.facebook.com/profile.php?id=100083786494772&mibextid=ZbWKwL',
   },
-  twitter: {
-    path: '#',
+  instagram: {
+    path: 'https://www.instagram.com/accuratecreativeminds',
   },
-  linkedIn: {
-    path: '#',
+  tiktok: {
+    path: 'http://tiktok.com/@accuratecreativeminds',
   },
 }
 

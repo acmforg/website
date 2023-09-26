@@ -6,4 +6,5 @@ interface IEvent {
   type: string
   image: string
   socialUrl?: string
+  url?: string
 }

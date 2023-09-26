@@ -1,11 +1,12 @@
 'use client'
 
-import { Heading, Maxwidth, Button } from '@/components'
+import { Heading, Maxwidth, Button, Paragraph } from '@/components'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import Input from './input'
 import NextImage from '@/components/next-image'
 import emailjs from '@emailjs/browser'
 import { toast } from 'react-hot-toast'
+import Link from 'next/link'
 
 interface ContactForm {
   name: string
@@ -88,6 +89,18 @@ const Contact = () => {
               />
               <Button tw="mt-5 w-full mb-3">Send Message</Button>
             </form>
+          </div>
+
+          <div>
+            <Paragraph>Other Contacts:</Paragraph>
+            <Paragraph>
+              <span tw="text-primary">Phone</span>:{' '}
+              <Link href={'tel:08025775243'}>08025775243</Link>
+            </Paragraph>
+            <Paragraph>
+              <span tw="text-primary">Email</span>:{' '}
+              <Link href={'mailto:admin@acmfng.org'}>admin@acmfng.org</Link>
+            </Paragraph>
           </div>
         </div>
       </Maxwidth>

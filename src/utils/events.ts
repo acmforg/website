@@ -1,3 +1,5 @@
+// after event is held, remove the 'url' and put 'socialUrl', which is to be the link to the video or post
+
 export const eventsList = [
   {
     title: 'Essay Competition',
@@ -41,6 +43,7 @@ export const eventsList = [
     desc: 'Employer-Employee Rights.',
     date: '2023-10-11 4:30:pm',
     location: 'Zoom',
+    url: 'https://us06web.zoom.us/j/89673425868?pwd=Q1FuSjJqaWhaRTJucEF4c0Q1OGxBUT09',
     type: 'virtual',
     image: '/events/5.jpg',
     socialUrl: '',
@@ -50,6 +53,7 @@ export const eventsList = [
     desc: 'Landlord-Tenants Rights.',
     date: '2023-11-18 4:30:pm',
     location: 'Zoom',
+    url: 'https://us06web.zoom.us/j/89673425868?pwd=Q1FuSjJqaWhaRTJucEF4c0Q1OGxBUT09',
     type: 'virtual',
     image: '/events/6.jpg',
     socialUrl: '',

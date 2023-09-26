@@ -11,7 +11,7 @@ export const heroConfig = {
 export const subHero = {
   heading:
     "Our journey began with a vision of harnessing the untapped potential of today's youth.",
-  sub: 'The ACCURATE CREATIVE-MINDS FOUNDATION was established to provide a platform where young talents can flourish, dreams can be realized, and communities can thrive.',
+  sub: 'The ACCURATE-CREATIVE MINDS FOUNDATION was established to provide a platform where young talents can flourish, dreams can be realized, and communities can thrive.',
   cta: 'Learn More',
   ctaUrl: routePaths.about.path,
   img: '/sub-hero.png',

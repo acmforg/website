@@ -74,9 +74,9 @@ const Testimonials = () => {
             slidesToShow={1}
             variableWidth
             adaptiveHeight
-            // centerMode
             dots
             autoplay
+            autoplaySpeed={15000}
             dotsClass="slick-dots dots"
             pauseOnHover
             prevArrow={<PrevArrow />}
