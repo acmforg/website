@@ -45,7 +45,7 @@ const Testimonials = () => {
     )
   }
   return (
-    <Maxwidth tw="flex flex-col items-center relative pt-6 gap-16 px-0 lg:(gap-20)">
+    <Maxwidth tw="flex flex-col items-center relative overflow-hidden pt-6 gap-16 px-0 lg:(gap-20)">
       <YellowDoor />
 
       <FancyHeader
@@ -72,16 +72,6 @@ const Testimonials = () => {
             infinite
             slidesToScroll={1}
             slidesToShow={1}
-            // centerPadding="100px"
-            // responsive={[
-            //   {
-            //     breakpoint: 1024,
-            //     settings: {
-            //       slidesToShow: 2,
-            //       slidesToScroll: 2,
-            //     },
-            //   },
-            // ]}
             variableWidth
             adaptiveHeight
             // centerMode

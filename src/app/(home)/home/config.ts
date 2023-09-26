@@ -60,24 +60,18 @@ export const involvements = [
 
 export const testimonials = [
   {
-    comment:
-      'ACCURATE CREATIVE-MINDS FOUNDATION changed my life. Their mentorship program helped me discover my true potential',
-    name: 'Dele Salako',
+    comment: `The Accurate creative minds really help me as a final year student while I was writing my project. The knowledge gained from the Accurate creative minds was of great help as I knew what exactlyand while learning, I also got to win a grant of #20,000 for being an active participant
+Thanks a lot Accurate creative minds.`,
+    name: 'Damilola Oluwayomi',
   },
   {
     comment:
-      'ACCURATE CREATIVE-MINDS FOUNDATION changed my life. Their mentorship program helped me discover my true potential',
-    name: 'Dele Salako',
+      'I would like to extend my heartfelt gratitude to ACMF, for the invaluable guidance and knowledge they have imparted to me in the realm of project and seminar report writing. The skills and expertise I have gained through their training are immeasurable, and I feel equipped with the tools necessary to excel in my academic and professional pursuits.',
+    name: 'Benedicta O. Aluko',
   },
   {
-    comment:
-      'ACCURATE CREATIVE-MINDS FOUNDATION changed my life. Their mentorship program helped me discover my true potential',
-    name: 'Dele Salako',
-  },
-  {
-    comment:
-      'ACCURATE CREATIVE-MINDS FOUNDATION changed my life. Their mentorship program helped me discover my true potential',
-    name: 'Dele Salako',
+    comment: `I'm sincerely grateful for the generous 20,000 Naira research grant. Your support is invaluable, and it'll greatly impact my research. I'm honored to receive your foundation's generosity and will use this grant to advance our shared goals. Thank you for believing in my work.`,
+    name: 'Awe Blessing',
   },
 ]
 

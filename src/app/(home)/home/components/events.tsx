@@ -15,12 +15,21 @@ import Link from 'next/link'
 import { routePaths } from '@/utils/routepaths'
 
 const Events = () => {
-  const upcomingEvents = eventsList.filter(
-    event => new Date(event.date) > new Date(),
-  )
-  const pastEvents = eventsList.filter(
-    event => new Date(event.date) < new Date(),
-  )
+  const upcomingEvents = eventsList
+    .filter(event => new Date(event.date) > new Date())
+    .sort((a, b) => {
+      const dateA = new Date(a.date)
+      const dateB = new Date(b.date)
+      return dateA.getTime() - dateB.getTime()
+    })
+  const pastEvents = eventsList
+    .filter(event => new Date(event.date) < new Date())
+    .sort((a, b) => {
+      const dateA = new Date(a.date)
+      const dateB = new Date(b.date)
+      return dateB.getTime() - dateA.getTime()
+    })
+
   const eventsToShow =
     upcomingEvents.length > 2
       ? upcomingEvents.slice(0, 2)
