@@ -5,4 +5,5 @@ interface IEvent {
   location: string
   type: string
   image: string
+  socialUrl?: string
 }
