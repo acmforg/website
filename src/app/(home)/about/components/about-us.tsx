@@ -22,9 +22,20 @@ const AboutUs = () => {
           </Heading>
 
           {speech.map((paragraph, idx) => (
-            <Paragraph tw="mb-6" key={idx}>
-              {paragraph}
-            </Paragraph>
+            <>
+              <Paragraph tw="mb-4" key={idx}>
+                {paragraph.p}
+              </Paragraph>
+              {paragraph?.ul ? (
+                <ol tw="list-disc">
+                  {paragraph.ul.map((item, idx) => (
+                    <li key={idx}>
+                      <Paragraph tw="p-2">{item}</Paragraph>
+                    </li>
+                  ))}
+                </ol>
+              ) : null}
+            </>
           ))}
         </div>
       </div>

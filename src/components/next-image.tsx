@@ -24,7 +24,7 @@ const NextImage = ({
     <Cover {...rest}>
       <Image
         src={src}
-        alt={alt}
+        alt={alt ?? ''}
         css={[objectCover ? cover : contain, imageStyles]}
         fill
         style={{
