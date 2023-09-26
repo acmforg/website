@@ -4,7 +4,7 @@ import { Heading, Logo, Maxwidth, Paragraph } from '@/components'
 import { headerLinks, socials } from '@/utils/routepaths'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { FaFacebook, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa'
 import tw from 'twin.macro'
 
 const Footer = () => {
@@ -67,9 +67,9 @@ const Footer = () => {
 
 const socialLinks = [
   {
-    title: 'twitter',
-    icon: FaTwitter,
-    link: socials.twitter.path,
+    title: 'instagram',
+    icon: FaInstagram,
+    link: socials.instagram.path,
   },
   {
     title: 'facebook',
@@ -77,9 +77,9 @@ const socialLinks = [
     link: socials.facebook.path,
   },
   {
-    title: 'linkedin',
-    icon: FaLinkedinIn,
-    link: socials.linkedIn.path,
+    title: 'tiktok',
+    icon: FaTiktok,
+    link: socials.tiktok.path,
   },
 ]
 

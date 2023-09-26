@@ -11,6 +11,7 @@ const EventCard = ({
   location,
   type,
   image,
+  url,
   socialUrl,
 }: IEvent) => {
   return (
@@ -28,10 +29,20 @@ const EventCard = ({
           {title}
         </Heading>
 
-        <Paragraph tw="flex gap-2 items-center">
-          <CiLocationOn size={20} />
-          {location}
-        </Paragraph>
+        {type === 'virtual' && url ? (
+          <Link
+            href={url}
+            tw="hocus:(text-primary) font-medium flex gap-2 items-center"
+          >
+            <AiOutlineLink size={20} />
+            {location} link
+          </Link>
+        ) : (
+          <Paragraph tw="flex gap-2 items-center">
+            <CiLocationOn size={20} />
+            {location}
+          </Paragraph>
+        )}
 
         {socialUrl ? (
           <Link
