@@ -1,32 +1,43 @@
 'use client'
 
-import { FancyHeader, Maxwidth } from '@/components'
-import { useEvents } from '@/utils/events'
+import { FancyHeader, LoadingComponent, Maxwidth } from '@/components'
 import EventsListMap from './events-list-map'
 import tw from 'twin.macro'
+import { useEventsList } from '@/utils/events/hook'
 
 const EventsContainer = () => {
-  const { pastEvents, upcomingEvents } = useEvents()
+  const { data, isLoading } = useEventsList()
 
-  let hasPast = pastEvents.length > 0,
-    hasUpcoming = upcomingEvents.length > 0
+  const { upcomingEvents, pastEvents } = data || ({} as IEventResponse)
+
+  let hasPast = pastEvents?.length > 0,
+    hasUpcoming = upcomingEvents?.length > 0
 
   return (
     <Maxwidth tw="flex flex-col gap-16 py-16 lg:(pb-[7.5rem] gap-[7.5rem])">
-      {hasUpcoming ? (
-        <EventClassWrapper>
-          <FancyHeader tw="text-center" ordinary="Upcoming" colored="Events" />
+      {isLoading ? (
+        <LoadingComponent />
+      ) : data ? (
+        <>
+          {hasUpcoming ? (
+            <EventClassWrapper>
+              <FancyHeader
+                tw="text-center"
+                ordinary="Upcoming"
+                colored="Events"
+              />
 
-          <EventsListMap events={upcomingEvents} />
-        </EventClassWrapper>
-      ) : null}
+              <EventsListMap events={upcomingEvents} />
+            </EventClassWrapper>
+          ) : null}
+          {hasPast ? (
+            <EventClassWrapper>
+              <FancyHeader tw="text-center" ordinary="Past" colored="Events" />
 
-      {hasPast ? (
-        <EventClassWrapper>
-          <FancyHeader tw="text-center" ordinary="Past" colored="Events" />
-
-          <EventsListMap events={pastEvents} />
-        </EventClassWrapper>
+              <EventsListMap events={pastEvents} />
+            </EventClassWrapper>
+          ) : null}
+        </>
       ) : null}
     </Maxwidth>
   )

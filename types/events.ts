@@ -8,3 +8,8 @@ interface IEvent {
   socialUrl?: string
   url?: string
 }
+
+interface IEventResponse {
+  pastEvents: IEvent[]
+  upcomingEvents: IEvent[]
+}

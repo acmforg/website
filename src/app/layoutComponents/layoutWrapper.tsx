@@ -6,9 +6,11 @@ import Footer from './footer'
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
 import { MinHeight } from '@/components/maxwidth'
 import { Toaster } from 'react-hot-toast'
+import { fetchEvents } from '@/utils/events'
 
 const LayoutWrapper = ({ children }: { children: ReactNode }) => {
   const [queryClient] = useState(() => new QueryClient())
+  queryClient.prefetchQuery({ queryKey: ['events'], queryFn: fetchEvents })
 
   return (
     <>

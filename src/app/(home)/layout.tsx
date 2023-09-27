@@ -1,3 +1,5 @@
+'use client'
+
 import getQueryClient from '@/utils/lib/react-query/queryClient'
 import { ReactNode } from 'react'
 import { dehydrate, Hydrate } from '@tanstack/react-query'
