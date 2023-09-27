@@ -1,5 +1,8 @@
 // after event is held, remove the 'url' and put 'socialUrl', which is to be the link to the video or post
 
+import { compareAsc, isBefore } from 'date-fns'
+import { useState, useEffect } from 'react'
+
 export const eventsList = [
   {
     title: 'Essay Competition',
@@ -68,3 +71,38 @@ export const eventsList = [
     socialUrl: '',
   },
 ]
+
+export const useEvents = () => {
+  const [events, setEvents] = useState({
+    upcomingEvents: [] as IEvent[],
+    pastEvents: [] as IEvent[],
+  })
+
+  useEffect(() => {
+    // Function to fetch and update events data
+    const fetchAndUpdateEvents = () => {
+      const currentDate = new Date()
+
+      const upcomingEvents = eventsList
+        .filter(event => isBefore(currentDate, new Date(event.date)))
+        .sort((a, b) => compareAsc(new Date(a.date), new Date(b.date)))
+
+      const pastEvents = eventsList
+        .filter(event => isBefore(new Date(event.date), currentDate))
+        .sort((a, b) => compareAsc(new Date(b.date), new Date(a.date)))
+
+      setEvents({ upcomingEvents, pastEvents })
+    }
+
+    // Fetch and update events immediately
+    fetchAndUpdateEvents()
+
+    // Refresh events every hour (3600000 milliseconds)
+    const intervalId = setInterval(fetchAndUpdateEvents, 3600000)
+
+    // Clean up the interval when the component unmounts
+    return () => clearInterval(intervalId)
+  }, []) // Empty dependency array ensures this effect runs only once
+
+  return events
+}
