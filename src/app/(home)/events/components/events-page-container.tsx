@@ -1,26 +1,12 @@
 'use client'
 
 import { FancyHeader, Maxwidth } from '@/components'
-import { eventsList } from '@/utils/events'
+import { useEvents } from '@/utils/events'
 import EventsListMap from './events-list-map'
 import tw from 'twin.macro'
 
 const EventsContainer = () => {
-  const upcomingEvents = eventsList
-    .filter(event => new Date(event.date) > new Date())
-    .sort((a, b) => {
-      const dateA = new Date(a.date)
-      const dateB = new Date(b.date)
-      return dateA.getTime() - dateB.getTime()
-    })
-
-  const pastEvents = eventsList
-    .filter(event => new Date(event.date) < new Date())
-    .sort((a, b) => {
-      const dateA = new Date(a.date)
-      const dateB = new Date(b.date)
-      return dateB.getTime() - dateA.getTime()
-    })
+  const { pastEvents, upcomingEvents } = useEvents()
 
   let hasPast = pastEvents.length > 0,
     hasUpcoming = upcomingEvents.length > 0
