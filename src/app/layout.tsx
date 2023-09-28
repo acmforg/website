@@ -1,13 +1,23 @@
-import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import GlobalStyles from '@/utils/styles/GlobalStyles'
+import StyledComponentsRegistry from '@/utils/lib/styled-comp-registry'
+import LayoutWrapper from './layoutComponents/layoutWrapper'
+import '@/utils/styles/index.css'
 
-const inter = Inter({ subsets: ['latin'] })
+import { Plus_Jakarta_Sans } from 'next/font/google'
 
 export const metadata: Metadata = {
-  title: 'ACMF - Accurate Creative Minds Foundation',
-  description: 'Empowering the Next Generation to Realize Their Full Potential',
+  title: 'ACMF website',
+  description:
+    "We believe in the boundless potential of young minds. We're on a mission to provide them with the tools, mentorship, and opportunities they need to turn their dreams into reality.",
 }
+
+const sans = Plus_Jakarta_Sans({
+  weight: ['400', '500', '600'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-sans',
+})
 
 export default function RootLayout({
   children,
@@ -15,8 +25,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={`${sans.variable}`}>
+      <body>
+        <StyledComponentsRegistry>
+          <GlobalStyles />
+          <LayoutWrapper>{children}</LayoutWrapper>
+        </StyledComponentsRegistry>
+      </body>
     </html>
   )
 }
