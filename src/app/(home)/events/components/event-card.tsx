@@ -3,6 +3,7 @@ import NextImage from '@/components/next-image'
 import Link from 'next/link'
 import { CiLocationOn } from 'react-icons/ci'
 import { AiOutlineLink } from 'react-icons/ai'
+import { format } from 'date-fns'
 
 const EventCard = ({
   title,
@@ -24,7 +25,7 @@ const EventCard = ({
       />
 
       <div tw="flex flex-col gap-2 lg:(gap-3)">
-        <Paragraph>{date}</Paragraph>
+        <Paragraph>{format(new Date(date), 'yyyy-mm-dd  hh:mmaaa')}</Paragraph>
         <Heading $variant="h4" tw="lg:(pb-1 text-xl)">
           {title}
         </Heading>
