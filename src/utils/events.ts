@@ -1,4 +1,5 @@
 // after event is held, remove the 'url' and put 'socialUrl', which is to be the link to the video or post
+// universal time format - YYYY-MM-DDTHH:mm:ss.sssZ
 
 import { compareAsc, isBefore } from 'date-fns'
 import { useState, useEffect } from 'react'
@@ -7,7 +8,7 @@ export const eventsList = [
   {
     title: 'Essay Competition',
     desc: 'Nigeria @ 62, The good, the bad, and the way forward',
-    date: '2022-10-22 10:00:00',
+    date: '2022-10-22T10:00:00.000+01:00',
     location: 'Havarde College, Abeokuta',
     type: 'physical',
     image: '/events/1.jpg',
@@ -16,7 +17,7 @@ export const eventsList = [
   {
     title: 'Report Writing Workshop',
     desc: 'Workshop on seminar and project report writing for final year students of tertiary institutions. Graced by Lecturers and undergraduates from multiple institutions and marked by research grant awards.',
-    date: '2023-01-14 10:00:00',
+    date: '2023-01-14T10:00:00.000+01:00',
     location: 'Havarde College, Abeokuta',
     type: 'physical',
     image: '/events/2.jpg',
@@ -26,7 +27,7 @@ export const eventsList = [
     title:
       'A discussion around the deficiencies in the Nigerian educational system',
     desc: 'A dive into the role of parents, the government, school authorities and the students in reaching a lasting solution.',
-    date: '2023-08-16 16:30:00',
+    date: '2023-08-16T16:30:00.000+01:00',
     location: 'Zoom',
     type: 'virtual',
     image: '/events/3.jpg',
@@ -35,7 +36,7 @@ export const eventsList = [
   {
     title: 'Legal Awareness Campaign - Student Rights',
     desc: 'Enlightenment on Students Rights.',
-    date: '2023-09-20 16:30:00',
+    date: '2023-09-20T16:30:00.000+01:00',
     location: 'Zoom',
     type: 'virtual',
     image: '/events/4.jpg',
@@ -44,7 +45,7 @@ export const eventsList = [
   {
     title: 'Legal Awareness Campaign - Employer-Employee Rights',
     desc: 'Employer-Employee Rights.',
-    date: '2023-10-11 16:30:00',
+    date: '2023-10-11T16:30:00.000+01:00',
     location: 'Zoom',
     url: 'https://us06web.zoom.us/j/89673425868?pwd=Q1FuSjJqaWhaRTJucEF4c0Q1OGxBUT09',
     type: 'virtual',
@@ -54,7 +55,7 @@ export const eventsList = [
   {
     title: 'Legal Awareness Campaign - Landlord-Tenant Rights',
     desc: 'Landlord-Tenants Rights.',
-    date: '2023-11-18 16:30:00',
+    date: '2023-11-18T16:30:00.000+01:00',
     location: 'Zoom',
     url: 'https://us06web.zoom.us/j/89673425868?pwd=Q1FuSjJqaWhaRTJucEF4c0Q1OGxBUT09',
     type: 'virtual',
