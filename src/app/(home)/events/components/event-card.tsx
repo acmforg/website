@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { CiLocationOn } from 'react-icons/ci'
 import { AiOutlineLink } from 'react-icons/ai'
 import { format } from 'date-fns'
+import tw from 'twin.macro'
 
 const EventCard = ({
   title,
@@ -19,7 +20,8 @@ const EventCard = ({
     <div tw="flex flex-col gap-6">
       <NextImage
         cover
-        tw="rounded-[0.5rem] h-[16rem] border"
+        imageStyles={tw`bg-top`}
+        tw="rounded-[0.5rem] h-[16rem] border sm:(h-[25rem]) lg:(h-[20rem])"
         src={image}
         alt={title}
       />
@@ -47,7 +49,7 @@ const EventCard = ({
 
         {socialUrl ? (
           <Link
-            tw="flex items-center gap-4 hocus:(text-primary)"
+            tw="flex items-center w-fit gap-4 hocus:(text-primary)"
             href={socialUrl}
             target="_blank"
           >
