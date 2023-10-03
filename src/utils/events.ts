@@ -65,7 +65,7 @@ export const eventsList = [
   {
     title: 'Talent Hunt',
     desc: '',
-    date: '2024',
+    date: '2024-01-01T10:00:00.000+01:00',
     location: '',
     type: '',
     image: '/events/7.jpg',

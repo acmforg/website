@@ -27,7 +27,7 @@ const EventCard = ({
       />
 
       <div tw="flex flex-col gap-2 lg:(gap-3)">
-        <Paragraph>{format(new Date(date), 'yyyy-mm-dd  hh:mmaaa')}</Paragraph>
+        <Paragraph>{format(new Date(date), 'yyyy-MM-dd  hh:mmaaa')}</Paragraph>
         <Heading $variant="h4" tw="lg:(pb-1 text-xl)">
           {title}
         </Heading>
