@@ -21,13 +21,15 @@ const EventCard = ({
       <NextImage
         cover
         imageStyles={tw`bg-top`}
-        tw="rounded-[0.5rem] h-[16rem] border sm:(h-[25rem]) lg:(h-[20rem])"
+        tw="rounded-[0.5rem] h-[20rem] border sm:(h-[25rem]) lg:(h-[20rem])"
         src={image}
         alt={title}
       />
 
       <div tw="flex flex-col gap-2 lg:(gap-3)">
-        <Paragraph>{format(new Date(date), 'yyyy-MM-dd  hh:mmaaa')}</Paragraph>
+        <Paragraph>
+          {format(new Date(date), 'do LLLL, yyyy.  hh:mmaaa')}
+        </Paragraph>
         <Heading $variant="h4" tw="lg:(pb-1 text-xl)">
           {title}
         </Heading>
