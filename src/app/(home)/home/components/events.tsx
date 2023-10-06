@@ -6,12 +6,13 @@ import { routePaths } from '@/utils/routepaths'
 
 const Events = () => {
   const { upcomingEvents, pastEvents } = useEvents()
+  const upcomingEventsLength = upcomingEvents.length
 
   const eventsToShow =
-    upcomingEvents.length >= 2
-      ? upcomingEvents.slice(0, 2)
-      : upcomingEvents.length === 1
-      ? [upcomingEvents[0], pastEvents[0]]
+    upcomingEventsLength > 2
+      ? upcomingEvents.slice(0, 3)
+      : upcomingEventsLength <= 2
+      ? [...upcomingEvents, ...pastEvents.slice(0, 3 - upcomingEventsLength)]
       : pastEvents.slice(0, 2)
 
   return (
