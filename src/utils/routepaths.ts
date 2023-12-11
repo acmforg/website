@@ -14,6 +14,9 @@ export const routePaths = {
   programs: {
     path: 'programs',
   },
+  joinUs: {
+    path: 'https://forms.gle/zadggeEjCjJErgig9',
+  },
 }
 
 export const socials = {
@@ -32,5 +35,6 @@ export const headerLinks = [
   { title: 'Home', href: routePaths.home.path },
   { title: 'About', href: routePaths.about.path },
   { title: 'Events', href: routePaths.events.path },
+  { title: 'Become a Member', href: routePaths.joinUs.path },
   { title: 'Contact Us', href: routePaths.contact.path },
 ]

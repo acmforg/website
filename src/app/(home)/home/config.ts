@@ -56,6 +56,14 @@ export const involvements = [
     ctaUrl: '#contact',
     bg: '/partnership.png',
   },
+  {
+    title: 'Membership',
+    desc: 'Become a member of this great non-profit making non-governmental organization for free.',
+    cta: 'Become a Member',
+    ctaUrl: routePaths.joinUs.path,
+    bg: '/volunteer.png',
+    target: '_blank',
+  },
 ]
 
 export const testimonials = [
