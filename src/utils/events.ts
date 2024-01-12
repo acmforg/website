@@ -65,10 +65,20 @@ export const eventsList = [
   {
     title: 'Talent Hunt',
     desc: '',
-    date: '2024-01-01T10:00:00.000+01:00',
+    date: '2024-02-01T10:00:00.000+01:00',
     location: '',
     type: '',
     image: '/events/7.jpg',
+    socialUrl: '',
+  },
+  {
+    title: 'Launching and Formal opening of ACMF Development Center',
+    desc: '',
+    date: '2024-01-20T10:00:00.000+01:00',
+    location:
+      'Central suite, 3rd floor, Imran Taiwo Rockview Complex, Opposite Polaris Bank, Kuto, Abeokuta',
+    type: 'physical',
+    image: '/events/8.jpg',
     socialUrl: '',
   },
 ]
