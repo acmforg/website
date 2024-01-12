@@ -39,12 +39,12 @@ const EventCard = ({
             href={url}
             tw="hocus:(text-primary) font-medium flex gap-2 items-center"
           >
-            <AiOutlineLink size={20} />
+            <AiOutlineLink size={20} tw="min-w-[20px]" />
             {location} link
           </Link>
         ) : (
           <Paragraph tw="flex gap-2 items-center">
-            <CiLocationOn size={20} />
+            <CiLocationOn size={20} tw="min-w-[20px]" />
             {location}
           </Paragraph>
         )}
