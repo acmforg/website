@@ -10,7 +10,7 @@ const Registerations = () => {
     <Maxwidth tw="flex flex-col items-center relative pt-6 gap-16 lg:(gap-20)">
       <GreenDoor />
 
-      <FancyHeader ordinary="Latest" colored="Registerations" />
+      <FancyHeader ordinary="Latest" colored="Registrations" />
 
       <div tw="w-full grid gap-10 justify-center sm:(grid-cols-2) lg:(flex gap-[4rem])">
         {registerations.map(registeration => {
