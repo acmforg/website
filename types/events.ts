@@ -7,4 +7,6 @@ interface IEvent {
   image: string
   socialUrl?: string
   url?: string
+  endDate?: string
+  withTime?: boolean
 }
