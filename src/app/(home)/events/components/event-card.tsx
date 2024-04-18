@@ -15,6 +15,8 @@ const EventCard = ({
   image,
   url,
   socialUrl,
+  endDate,
+  withTime = true,
 }: IEvent) => {
   return (
     <div tw="flex flex-col gap-6">
@@ -28,7 +30,12 @@ const EventCard = ({
 
       <div tw="flex flex-col gap-2 lg:(gap-3)">
         <Paragraph>
-          {format(new Date(date), 'do LLLL, yyyy.  hh:mmaaa')}
+          {format(new Date(date), 'do LLLL, yyyy')}
+          {endDate
+            ? ` to ${format(new Date(endDate), ' do LLLL,yyyy')}`
+            : withTime
+            ? format(new Date(date), '. hh:mmaaa')
+            : '.'}
         </Paragraph>
         <Heading $variant="h4" tw="lg:(pb-1 text-xl)">
           {title}

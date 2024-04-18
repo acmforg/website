@@ -12,7 +12,9 @@ const DesktopNav = () => {
 
   return (
     <nav tw="hidden lg:flex relative items-center flex-1 justify-between text-[#454545]">
-      <Logo />
+      <Link href={'/'}>
+        <Logo />
+      </Link>
 
       <ul tw="flex flex-row gap-[2rem] xl:gap-[3rem]">
         {headerLinks.map(link => {
