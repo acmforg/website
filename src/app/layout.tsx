@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'personal development',
     'community',
   ],
-  category: 'islam, personal development',
+  category: 'personal development',
   openGraph: {
     title: 'ACMF',
     description: ACMF_DESC,
