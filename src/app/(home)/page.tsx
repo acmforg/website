@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <main tw="flex flex-col gap-[5rem] lg:(gap-[7.5rem])">
       <Hero />
-      {/* <Registerations /> */}
+      <Registerations />
       <SubHero />
       <Programs />
       <Involvement />

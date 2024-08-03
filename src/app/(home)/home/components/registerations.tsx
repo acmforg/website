@@ -17,11 +17,11 @@ const Registerations = () => {
           const { bg, title, desc, ctaUrl } = registeration
 
           return (
-            <div tw="flex flex-col gap-6 lg:(w-[25rem])">
+            <div key={title} tw="flex flex-col gap-6 lg:(w-[25rem])">
               <NextImage
                 cover
                 imageStyles={tw`bg-top`}
-                tw="rounded-[0.5rem] h-[20rem] border sm:(h-[25rem])"
+                tw="rounded-[0.5rem] h-[25rem] border sm:(h-[30rem])"
                 src={bg}
                 alt={title}
               />
@@ -46,17 +46,17 @@ const Registerations = () => {
 
 const registerations = [
   {
-    title: '2 weeks Vocational Training',
-    desc: 'Acquire a vocational skill to enhance self-sustainablity',
+    title: 'Exclusive Computer Training Program',
+    desc: 'Unlock your future with essential computer skills',
     cta: 'Register now',
-    ctaUrl: 'https://forms.gle/JR6bEs46eZ2Nasdn6',
+    ctaUrl: 'https://forms.gle/SCcH9uUxuoh5M8gr6',
     bg: '/registerations/1.jpg',
   },
   {
-    title: 'Free 2 days Writing Seminar',
-    desc: 'Seminar and Project Report writing and presentation skills  for students in tertiary institutions',
+    title: 'AI Content Creation Training',
+    desc: 'Join our AI content creation masterclass and transform your contents to compelling ones.',
     cta: 'Register now',
-    ctaUrl: 'https://forms.gle/Au96aXb9wsMoGaGN8',
+    ctaUrl: 'https://forms.gle/q98zN9YZdr59gkHy9',
     bg: '/registerations/2.jpg',
   },
 ]
