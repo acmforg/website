@@ -14,7 +14,7 @@ const Registerations = () => {
 
       <div tw="w-full grid gap-10 justify-center sm:(grid-cols-2) lg:(flex gap-[4rem])">
         {registerations.map(registeration => {
-          const { bg, title, desc, ctaUrl } = registeration
+          const { bg, title, desc, ctaUrl, cta } = registeration
 
           return (
             <div key={title} tw="flex flex-col gap-6 lg:(w-[25rem])">
@@ -33,7 +33,7 @@ const Registerations = () => {
                 <Paragraph tw="flex gap-2 text-center">{desc}</Paragraph>
 
                 <Button as={'a'} href={ctaUrl} tw="mt-4">
-                  Register Now
+                  {cta}
                 </Button>
               </div>
             </div>
