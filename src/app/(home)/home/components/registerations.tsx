@@ -46,18 +46,18 @@ const Registerations = () => {
 
 const registerations = [
   {
-    title: 'Exclusive Computer Training Program',
-    desc: 'Unlock your future with essential computer skills',
-    cta: 'Register now',
-    ctaUrl: 'https://forms.gle/SCcH9uUxuoh5M8gr6',
-    bg: '/registerations/1.jpg',
+    title: 'Annual Subsidized Medical Checkup',
+    desc: 'Benefit from our effort to give back to the community through this initiative of ours today!',
+    cta: 'Subsidize your Test!',
+    ctaUrl: 'https://wa.me/qr/7Y24KCX5FSY2K1',
+    bg: '/registerations/check-up-24.png',
   },
   {
-    title: 'AI Content Creation Training',
-    desc: 'Join our AI content creation masterclass and transform your contents to compelling ones.',
-    cta: 'Register now',
-    ctaUrl: 'https://forms.gle/q98zN9YZdr59gkHy9',
-    bg: '/registerations/2.jpg',
+    title: 'Essay Competition 2024',
+    desc: 'Exclusive opportunity for brilliant minds from secondary schools to showcase their prowess',
+    cta: 'Submit Now',
+    ctaUrl: 'mailto:accuratecreativeminds@gmail.com',
+    bg: '/registerations/essay-24.png',
   },
 ]
 
