@@ -16,6 +16,7 @@ const Home = () => {
       <Hero />
       <Registerations />
       <SubHero />
+      <Events />
       <Programs />
       <Involvement />
       <Testimonials />

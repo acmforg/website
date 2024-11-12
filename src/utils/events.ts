@@ -196,6 +196,16 @@ export const eventsList = [
     socialUrl: '',
     withTime: false,
   },
+  {
+    title: 'Essay Competition And Awards Ceremony',
+    desc: '',
+    date: '2024-11-14T11:00:00.000+01:00',
+    location: 'ACMF Development Centre, Kuto Abeokuta Ogun State.',
+    type: 'physical',
+    image: '/events/20.jpg',
+    socialUrl: '',
+    withTime: true,
+  },
 ]
 
 export const useEvents = () => {
