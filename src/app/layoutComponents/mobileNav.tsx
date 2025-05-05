@@ -5,9 +5,10 @@ import Logo from '@/components/Logo'
 import { IoMdCloseCircle } from 'react-icons/io'
 import { FiMenu } from 'react-icons/fi'
 import tw from 'twin.macro'
-import { headerLinks } from '@/utils/routepaths'
+import { headerLinks, routePaths } from '@/utils/routepaths'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { LinkButton } from '@/components/Button'
 
 const MobileNav = () => {
   const [menuOpen, setMenu] = useState(false)
@@ -47,9 +48,19 @@ const MobileNav = () => {
           <Logo />
         </Link>
 
-        <button title="mobile-menu-button" onClick={toggleMenu}>
-          {menuOpen ? <IoMdCloseCircle size={30} /> : <FiMenu size={30} />}
-        </button>
+        <div tw="flex items-center gap-3">
+          <LinkButton 
+            href={routePaths.donate.path} 
+            $isSmall 
+            tw="px-4 py-1 text-sm"
+          >
+            Donate
+          </LinkButton>
+          
+          <button title="mobile-menu-button" onClick={toggleMenu}>
+            {menuOpen ? <IoMdCloseCircle size={30} /> : <FiMenu size={30} />}
+          </button>
+        </div>
       </div>
 
       <nav
@@ -68,21 +79,34 @@ const MobileNav = () => {
               tw`flex flex-col flex-1 gap-6 text-[1.25rem] py-8 overflow-y-auto`,
           ]}
         >
-          {headerLinks.map(link => (
-            <Link
-              href={link.href}
-              key={link.title}
+          {headerLinks
+            .filter(link => link.title !== 'Donate')
+            .map(link => (
+              <Link
+                href={link.href}
+                key={link.title}
+                onClick={toggleMenu}
+                css={[
+                  tw`hover:(text-primary)`,
+                  menuOpen && tw`py-2 px-4`,
+                  link.href === pathName &&
+                    tw`text-primary underline underline-offset-[1rem]`,
+                ]}
+              >
+                {link.title}
+              </Link>
+            ))}
+            
+          <div tw="mt-4">
+            <LinkButton 
+              href={routePaths.donate.path} 
+              $isSmall 
               onClick={toggleMenu}
-              css={[
-                tw`hover:(text-primary)`,
-                menuOpen && tw`py-2 px-4`,
-                link.href === pathName &&
-                  tw`text-primary underline underline-offset-[1rem]`,
-              ]}
+              tw="px-6 py-2 mx-4"
             >
-              {link.title}
-            </Link>
-          ))}
+              Donate
+            </LinkButton>
+          </div>
         </ul>
       </nav>
     </div>

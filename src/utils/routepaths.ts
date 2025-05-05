@@ -17,6 +17,9 @@ export const routePaths = {
   joinUs: {
     path: 'https://forms.gle/zadggeEjCjJErgig9',
   },
+  donate: {
+    path: '/donate',
+  },
 }
 
 export const socials = {
@@ -37,4 +40,5 @@ export const headerLinks = [
   { title: 'Events', href: routePaths.events.path },
   { title: 'Become a Member', href: routePaths.joinUs.path },
   { title: 'Contact Us', href: routePaths.contact.path },
+  { title: 'Donate', href: routePaths.donate.path },
 ]
