@@ -11,8 +11,13 @@ import NextImage from '@/components/next-image'
 import tw from 'twin.macro'
 import { useToggle } from 'usehooks-ts'
 
-const Support = () => {
-  const [showDonationDetails, toggleDonationDetails] = useToggle(false)
+interface SupportProps {
+  showDetailsByDefault?: boolean
+}
+
+export const Support = ({ showDetailsByDefault = false }: SupportProps) => {
+  const [showDonationDetails, toggleDonationDetails] =
+    useToggle(showDetailsByDefault)
   return (
     <Maxwidth tw="relative flex flex-col py-12 gap-10 lg:(gap-[6rem] py-[3rem] flex-row items-center)">
       <NextImage
@@ -40,7 +45,9 @@ const Support = () => {
           enabling us to reach more youth and create lasting change.
         </Paragraph>
 
-        <Button onClick={toggleDonationDetails}>Donate Now</Button>
+        {!showDetailsByDefault ? (
+          <Button onClick={toggleDonationDetails}>Donate Now</Button>
+        ) : null}
         {showDonationDetails ? (
           <Paragraph>
             <Colored>Account name:</Colored> Accurate-Creative Minds Foundation{' '}

@@ -27,4 +27,16 @@ declare global {
       as?: string | Element
     }
   }
+
+  /**
+   * Global umami object
+   */
+  interface Window {
+    umami: Umami
+  }
+
+  /**
+   * Global umami object
+   */
+  var umami: Umami
 }
