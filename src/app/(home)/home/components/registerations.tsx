@@ -46,18 +46,18 @@ const Registerations = () => {
 
 const registerations = [
   {
-    title: 'Annual Subsidized Medical Checkup',
-    desc: 'Benefit from our effort to give back to the community through this initiative of ours today!',
-    cta: 'Subsidize your Test!',
-    ctaUrl: 'https://wa.me/qr/7Y24KCX5FSY2K1',
-    bg: '/registerations/check-up-24.png',
+    title: 'Hands-On Biology Class for Aspiring Scholars',
+    desc: 'A golden opportunity for students to explore the world of biology through hands-on experiments and interactive learning',
+    cta: 'Register Now!',
+    ctaUrl: 'https://forms.gle/d7P7x5YVMERoYpvD7',
+    bg: '/registerations/biology-25.png',
   },
   {
-    title: 'Essay Competition 2024',
-    desc: 'Exclusive opportunity for brilliant minds from secondary schools to showcase their prowess',
-    cta: 'Submit Now',
-    ctaUrl: 'mailto:accuratecreativeminds@gmail.com',
-    bg: '/registerations/essay-24.png',
+    title: 'Free Summer Vocational Training 2025',
+    desc: 'A chance for students to learn vocational skills and gain practical experience',
+    cta: 'Register Now!',
+    ctaUrl: 'https://forms.gle/d7P7x5YVMERoYpvD7',
+    bg: '/registerations/vocational-training-25.png',
   },
 ]
 
