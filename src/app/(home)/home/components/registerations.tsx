@@ -50,14 +50,14 @@ const registerations = [
     desc: 'A golden opportunity for students to explore the world of biology through hands-on experiments and interactive learning',
     cta: 'Register Now!',
     ctaUrl: 'https://forms.gle/d7P7x5YVMERoYpvD7',
-    bg: '/registerations/biology-25.png',
+    bg: '/registerations/biology-25.jpeg',
   },
   {
     title: 'Free Summer Vocational Training 2025',
     desc: 'A chance for students to learn vocational skills and gain practical experience',
     cta: 'Register Now!',
     ctaUrl: 'https://forms.gle/d7P7x5YVMERoYpvD7',
-    bg: '/registerations/vocational-training-25.png',
+    bg: '/registerations/vocational-training-25.jpeg',
   },
 ]
 
